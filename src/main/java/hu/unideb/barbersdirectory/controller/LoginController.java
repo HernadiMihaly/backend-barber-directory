@@ -33,7 +33,6 @@ public class LoginController {
     public ResponseEntity<HttpStatus> login(@RequestBody User user) throws Exception {
 
         Authentication authObject;
-        System.out.println(user.getEmail() + " " + user.getPassword());
         try{
             authObject = authentication.authenticate(new UsernamePasswordAuthenticationToken(user.getEmail()
                     , user.getPassword()));
